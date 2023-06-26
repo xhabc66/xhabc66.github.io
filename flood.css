@@ -1,0 +1,36 @@
+body{
+    text-align:center;
+}
+
+table{
+    margin-right:auto;
+    margin-left:auto;
+}
+
+td{
+    width:50px;
+    text-align:center;
+}
+
+#win{
+    color:red;
+    font-size:20px;
+}
+
+#lose{
+    color:black;
+    font-size: 20px;
+}
+
+a.hid{color:white;}
+
+.n0{color:purple;background-color: purple;border:1px solid purple;}
+.n1{color:blue;background-color: blue;border:1px solid blue;}
+.n2{color:red;background-color: red;border:1px solid red;}
+.n3{color:gold;background-color: gold;border:1px solid gold;}
+.n4{color:green;background-color: green;border:1px solid green;}
+.n5{color:orange;background-color: orange;border:1px solid orange;}
+.n6{color:grey;background-color: grey;border:1px solid grey;}
+.n7{color:black;background-color: black;border:1px solid black;}
+
+
