@@ -1,0 +1,32 @@
+body{
+    text-align:center;
+}
+
+table{
+    margin-right:auto;
+    margin-left:auto;
+}
+
+td{
+    width:100px;
+    text-align:center;
+}
+
+#win{
+    color:red;
+    font-size:20px;
+}
+
+.n0{color:white;border:1px solid white;}
+.n1{color:black;border:1px solid black;}
+.n2{color:darkorange;border:1px solid darkorange;}
+.n3{color:chocolate;border:1px solid chocolate;}
+.n4{color:darkgoldenrod;border:1px solid darkgoldenrod;}
+.n5{color:chartreuse;border:1px solid chartreuse;}
+.n6{color:darkseagreen;border:1px solid darkseagreen;}
+.n7{color:cyan;border:1px solid cyan;}
+.n8{color:blue;border:1px solid blue;}
+.n9{color:darkorchid;border:1px solid darkorchid;}
+.n10{color:fuchsia;border:1px solid fuchsia;}
+.n11{color:purple;border:1px solid purple;}
+
