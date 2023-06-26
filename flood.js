@@ -81,7 +81,7 @@ function openGe(i,j,col,to,flag)
 function begin()
 {
 	
-	n=document.getElementById("n").value;n=Math.min(Math.max(4,n),100);
+	n=document.getElementById("n").value;n=Math.min(Math.max(4,n),50);
     k=document.getElementById("k").value;
 	document.getElementById("n").value=n;k=Math.min(Math.max(2,k),8);
     document.getElementById("k").value=k;
