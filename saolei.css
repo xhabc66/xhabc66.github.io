@@ -1,0 +1,42 @@
+body{
+    text-align:center;
+}
+
+table{
+    margin-right:auto;
+    margin-left:auto;
+}
+
+td{
+    width:50px;
+    text-align:center;
+}
+
+#win{
+    color:red;
+    font-size:20px;
+}
+
+.no{
+    color:red;
+}
+
+.yes{
+    color:green;
+}
+
+.open{
+    color:red;
+    background-color: red;
+}
+
+.n0{color:white;border:1px solid grey;}
+.n1{color:black;border:1px solid black;}
+.n2{color:darkorange;border:1px solid darkorange;}
+.n3{color:firebrick;border:1px solid firebrick;}
+.n4{color:gold;border:1px solid gold;}
+.n5{color:chartreuse;border:1px solid chartreuse;}
+.n6{color:cyan;border:1px solid cyan;}
+.n7{color:blue;border:1px solid blue;}
+.n8{color:fuchsia;border:1px solid fuchsia;}
+
