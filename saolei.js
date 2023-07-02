@@ -102,7 +102,7 @@ function openGe(i,j)
     }
     else if(ges[(i-1)*n+j-1].className=="open")return false;
     
-    newOpen();
+    
 	if(a[i][j]==-1)
     {
         ges[(i-1)*n+j-1].innerHTML="Boom!";
@@ -114,7 +114,7 @@ function openGe(i,j)
         allOpen();
 	    return false;
     }
-		open++;    book[i][j]=1;
+		open++;newOpen();    book[i][j]=1;
 	if(open>=n*n-Math.floor(n*n/10))
     {
         alert("You win!");
