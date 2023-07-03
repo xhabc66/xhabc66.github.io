@@ -144,7 +144,7 @@ function openGe(i,j)
 
 function begin()
 {
-	n=document.getElementById("n").value;
+	n=document.getElementById("n").value;n=Math.min(Math.max(10,n),500);
 	document.getElementById("n").value=n;
 	for(var i=1;i<=n;i++)for(var j=1;j<=n;j++)book[i][j]=0;open=0;
     win=lose=false;
