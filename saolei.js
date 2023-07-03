@@ -11,7 +11,7 @@ function addLoadEvent(newEvent)
     }
 }
 
-var n=10,lose=false,open=0;
+var n,lose=false,open=0;
 var a=Array(1145),b=Array(1145),book=Array(1145),lei=Array(100000);
 for(var i=0;i<1145;i++)a[i]=Array(1145),b[i]=Array(1145),book[i]=Array(1145),lei[i]=Array(2);
 var zt=0;
@@ -26,7 +26,7 @@ function change()
 
 function getn()
 {
-    document.getElementById("n").value=10;
+    document.getElementById("n").value=20;
 }
 
 function rand()
