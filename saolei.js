@@ -157,7 +157,7 @@ function begin()
     for(var i=1;i<=n;i++)
     {
         tableHTML+='<tr>';
-        for(var j=1;j<=n;j++)tableHTML+='<td><a href="#" onclick="openGe('+i+','+j+')">?</a></td>';
+        for(var j=1;j<=n;j++)tableHTML+='<td><a href="#" onclick="openGe('+i+','+j+');return false;">?</a></td>';
         tableHTML+='</tr>';
     }
     document.getElementsByTagName("table")[0].innerHTML=tableHTML;
