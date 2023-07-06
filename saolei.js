@@ -54,7 +54,8 @@ function Boom()
     for(var i=1;i<=n*n/10;i++)
     {
         var boom=ges[(lei[i][0]-1)*n+lei[i][1]-1];
-        boom.innerHTML="Boom!";
+        if(boom.className=="boom")continue;
+	boom.innerHTML="Boom!";
         boom.className="no";
     }
 }
@@ -106,7 +107,7 @@ function openGe(i,j)
 	if(a[i][j]==-1)
     {
         ges[(i-1)*n+j-1].innerHTML="Boom!";
-        ges[(i-1)*n+j-1].className="no";
+        ges[(i-1)*n+j-1].className="boom";
         lose=true;
         alert("You lose");
         
