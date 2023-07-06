@@ -30,6 +30,11 @@ td{
     background-color: red;
 }
 
+.boom{
+    color:white;
+    background-color: red;
+}
+
 .n0{color:white;border:1px solid grey;}
 .n1{color:black;border:1px solid black;}
 .n2{color:darkorange;border:1px solid darkorange;}
