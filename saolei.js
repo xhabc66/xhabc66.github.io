@@ -177,6 +177,7 @@ function help()
 document.onkeydown=function(){
     var key=event.keyCode;
     if(key==72)help();
+	else if(key==84)change();
 }
 
 
