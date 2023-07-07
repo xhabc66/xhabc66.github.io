@@ -166,3 +166,17 @@ function begin()
 
 addLoadEvent(getn);
 addLoadEvent(begin);
+
+function help()
+{
+    alert("按 t 切换模式。");
+    alert("按 h 查看帮助。");
+}
+
+
+document.onkeydown=function(){
+    var key=event.keyCode;
+    if(key==72)help();
+}
+
+
