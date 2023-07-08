@@ -6,18 +6,29 @@ function is_br(i,n)
     else return i%40==39;
 }
 
+even=1,odd=1;
+
 function random()
 {
     s="";
     n=parseInt(document.getElementById('num').value);
     min=parseInt(document.getElementById('min').value);
     max=parseInt(document.getElementById('max').value);
-    console.log(n+' '+min+' '+max);
+    even=document.getElementById('odd').checked;
+    odd=document.getElementById('even').checked;
+    if(!(even||odd))even=true,odd=true;
+    if(max-min==0)
+        if(max%2==1)even=true;
+        else odd=true;
+    document.getElementById('odd').checked=odd;
+    document.getElementById('even').checked=even;
     for(var i=0;i<n;i++)
     {
         t=Math.round(Math.random()*(max-min))+min;
+        while(!(max-min==0||(t%2==1&&even)||(t%2==0&&odd)))t=Math.round(Math.random()*(max-min))+min;
         s+=(t+' ');
         if(is_br(i,n))s+='<br>';
     }
     document.getElementById('res').innerHTML=s;
 }
+
