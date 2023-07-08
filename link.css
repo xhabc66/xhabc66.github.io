@@ -22,6 +22,10 @@ h1,h2{
 .red{color:black;background-color: #ff9999;}
 .yellow{color:black;background-color: #ffffaa;}
 .purple{color:black;background-color: #bb77ff;}
+.cyan{color:black;background-color:#aaffff;}
+.blue{color:black;background-color: #9999ff;}
 .yellow:hover{background-color: yellow;}
 .red:hover{background-color: #ff5555;}
-.purple:hover{background-color: #7733ff;}
+.purple:hover{color:white;background-color: #7733ff;}
+.cyan:hover{background-color:#00ffff;}
+.blue:hover{color:white;background-color: #5555ff;}
