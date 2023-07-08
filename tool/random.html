@@ -3,17 +3,23 @@
     <head>
         <meta charset='utf-8' />
         <title>离线生成随机数</title>
-        <link href='random.css' rel='stylesheet' />
+        <link href='https://xhabc66.github.io/tool/random.css' rel='stylesheet' />
     </head>
     <body>
         <h1>随机数生成</h1>
         数量：<input id='num' /><br>
         最小值：<input id='min' /><br>
         最大值：<input id='max' /><br>
+        <form>
+            生成数字类型：
+            <input type="checkbox" id="even" checked>
+            <label for="even">奇数</label>
+            <input type="checkbox" id="odd" checked>
+            <label for="odd">偶数</label>
+        </form><br>
         <a href='#' onclick='random();return false;'>生成</a>
         <h2>结果</h2>
         <div id='res'></div>
-        <script src='random.js'></script>
-      <script src='https://xhabc66.github.io/add.js'></script>
+        <script src='https://xhabc66.github.io/tool/random.js'></script>
     </body>
 </html>
