@@ -15,6 +15,22 @@ a{
     font-size:1.5em;
 }
 
+a.half{
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    width: calc(50vw - 80px);
+    border-radius: 10px;
+    background-color: purple;
+    color: white;
+    vertical-align: top;
+}
+
+a.half:hover{
+    background-color: #dd77dd;
+    color:black;
+}
+
 h1,h2{
     margin:0px;
     text-align:center;
