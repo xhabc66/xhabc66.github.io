@@ -3,7 +3,7 @@ function addLoadEvent(event)
     if(typeof window.onload=='undefined')window.onload=event;
     else
     {
-        old=window.onload;
+        var old=window.onload;
         window.onload=function(){
             old();
             event();
