@@ -10,10 +10,22 @@ even=1,odd=1;
 
 function random()
 {
+
     s="";
-    n=parseInt(document.getElementById('num').value);
-    min=parseInt(document.getElementById('min').value);
-    max=parseInt(document.getElementById('max').value);
+    n=document.getElementById('num').value;
+    min=document.getElementById('min').value;
+    max=document.getElementById('max').value;
+    if(!n||!min||!max)
+    {
+        alert("卡BUG？没门！");
+        return false;
+    }
+    n=Number(n),min=Number(min),max=Number(max);
+    if(!n||!min||!max)
+    {
+        alert("卡BUG？没门！");
+        return false;
+    }
     even=document.getElementById('odd').checked;
     odd=document.getElementById('even').checked;
     if(!(even||odd))even=true,odd=true;
@@ -31,4 +43,3 @@ function random()
     }
     document.getElementById('res').innerHTML=s;
 }
-
