@@ -26,12 +26,14 @@ function random()
         alert("卡BUG？没门！");
         return false;
     }
-    even=document.getElementById('odd').checked;
-    odd=document.getElementById('even').checked;
+    even=document.getElementById('even').checked;
+    odd=document.getElementById('odd').checked;
     if(!(even||odd))even=true,odd=true;
-    if(max-min==0)
+    if((max-min)==0)
+    {
         if(max%2==1)even=true;
         else odd=true;
+    }
     document.getElementById('odd').checked=odd;
     document.getElementById('even').checked=even;
     for(var i=0;i<n;i++)
@@ -43,3 +45,4 @@ function random()
     }
     document.getElementById('res').innerHTML=s;
 }
+
