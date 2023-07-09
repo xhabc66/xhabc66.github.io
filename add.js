@@ -1,12 +1,12 @@
-function addLoadEvent(event)
+function addLoadEvent(newEvent)
 {
-    if(typeof window.onload=='undefined')window.onload=event;
+    if(typeof window.onload!='function')window.onload=newEvent;
     else
     {
-        var old=window.onload;
+        var oldEvent=window.onload;
         window.onload=function(){
-            old();
-            event();
+            oldEvent();
+            newEvent();
         }
     }
 }
