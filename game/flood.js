@@ -95,7 +95,7 @@ function begin()
     for(var i=1;i<=n;i++)
     {
         tableHTML+='<tr>';
-        for(var j=1;j<=n;j++)tableHTML+='<td class="n'+a[i][j]+'"><a href="#" class="hid" onclick="OpenGe('+a[i][j]+')">?</a></td>';
+        for(var j=1;j<=n;j++)tableHTML+='<td class="n'+a[i][j]+'"><a href="#" class="hid" onclick="OpenGe('+a[i][j]+');return false;">?</a></td>';
         tableHTML+='</tr>';
     }
     document.getElementsByTagName("table")[0].innerHTML=tableHTML;
