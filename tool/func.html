@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+    <head>
+        <meta charset="utf-8" />
+        <title>函数生成工具</title>
+        <link href='func.css' rel='stylesheet' />
+    </head>
+    <body>
+        <h1>函数生成</h1>
+        <table id='func'></table>
+        <div id='size'>
+            <a>宽度：0~100</a>&nbsp;
+            <a>高度：0~100</a>
+        </div>
+        <div id='input'>
+            <a href='#' class='cha' onclick='plu();return false;'>+</a>&nbsp;
+            <a href='#' class='cha' onclick='sub();return false;'>-</a><br>
+            <a href='#' onclick='jia();return false;'>增加次数</a>&nbsp;
+            <a href='#' onclick='jian();return false;'>减少次数</a><br>
+            <div id='inputfunc'>
+            y=<input id='n2'/>x<sup>2</sup>+<input id='n1'/>x+<input id='n0'><br>
+            </div>
+            <a href='#' onclick='func();return false;'>生成</a>
+        </div>
+        <script src='func.js'></script>
+    </body>
+</html>
