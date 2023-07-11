@@ -1,0 +1,33 @@
+td{
+    padding: 1px;
+    width:1px;
+    height:1px;
+    background-color: white;
+    border:black;
+}
+
+td.yes{
+    background-color: black;
+}
+
+body{
+    text-align:center;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid black;
+}
+
+.cha{
+    font-size: 1.5em;
+}
+
+.akioi{
+    display:inline-block;
+}
+
+input{
+    width:30px;
+}
