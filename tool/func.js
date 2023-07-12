@@ -27,27 +27,32 @@ function mi(x)
 function func()
 {
     for(var i=0;i<=n;i++)yuan[i]=Number(document.getElementById('n'+i).value);
-    ge=document.getElementsByTagName('td')
+    ge=document.getElementsByTagName('td');
     for(var i=0;i<10000;i++)ge[i].className='no';
     for(var i=0;i<100;i++)
     {
         var y=bl*i;
-        var minn=Math.abs(mi(0)-y),mini=0;
-        
-        for(var j=99;j>-2;j--)
+        var minn=Math.abs(mi(0)-y),mini=Array(100),num=0;
+        for(var j=-1;j<=100;j++)
         {
             var x=bl*j;
             var t=Math.abs(mi(x)-y);
-            if(t<minn)minn=t,mini=j;
+            if(t<minn)minn=t;
         }
-        for(var j=0;j<=100;j++)
+        for(var j=-1;j<=100;j++)
         {
             var x=bl*j;
-            var t=Math.abs(mi(x)-y);
-            if(t<minn)minn=t,mini=j;
+            var t=mi(x);
+            var tmin=(mi(x-bl)+mi(x))/2,tmax=(mi(x+bl)+mi(x))/2;
+            if(i==10)console.log(i+' '+tmin+' '+t+' '+tmax+' '+j);
+            if((tmin<=y&&tmax>=y)||(tmin>=y&&tmax<=y))mini[num]=j,num++;
+            if(t<=tmin&&t<=tmax&&y<=Math.min(tmin,tmax))mini[num]=j,num++;
+            if(t>=tmin&&t>=tmax&&y>=Math.max(tmin,tmax))mini[num]=j,num++;
         }
-        console.log(mini+'->'+i);
-        if(mini<100&&mini>=0)ge[(99-i)*100+mini].className='yes';
+        console.log(i);
+        for(var k=0;k<num;k++)
+            if(mini[k]<100&&mini[k]>=0)
+                ge[(99-i)*100+mini[k]].className='yes';
     }
     for(var i=0;i<100;i++)
     {
