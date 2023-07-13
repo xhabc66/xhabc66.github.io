@@ -31,3 +31,7 @@ table{
 input{
     width:30px;
 }
+
+.x{background-color:blue;}
+.y{background-color:purple;}
+.center{background-color:red;}
