@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+        <meta charset='utf-8' />
+        <title>解方程</title>
+        <link href="https://xhabc66.github.io/tool/equ/classic.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>解一元多次方程组工具</h1>
+        <div id='?'>
+                <input id='n3'/>x<sup>3</sup>+
+                <input id='n2'/>x<sup>2</sup>+
+                <input id='n1'/>x+
+                <input id='c'/>=0&nbsp;
+            <br>
+        </div>
+        <a href='#' onclick="init();return false;">提交</a><br>
+        <a href='#' onclick="add();return false;">增加次数</a>
+        <a href='#' onclick="sub();return false;">减少次数</a>
+        <br>
+        <h2>结果</h2>
+        <p id='ans'>
+            x<sub>1</sub>=<a id='ans1'></a><br>
+            x<sub>2</sub>=<a id='ans2'></a><br>
+            x<sub>3</sub>=<a id='ans3'></a><br>
+        </p>
+        <script src='https://xhabc66.github.io/tool/equ/2.js'></script>
+        <script src='https://xhabc66.github.io/add.js'></script>
+    </body>
+</html>
