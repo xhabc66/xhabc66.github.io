@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>2048 game</title>
+    <link href="https://xhabc66.github.io/game/2048/1.css" type="text/css" rel="stylesheet" />
+    <link href="https://xhabc66.github.io/wtq.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <h2>欢迎来到 2048</h2>
+    <p id="max">最高分数：0</p>
+    <p id="score">您的分数：</p>
+    <p id="win"></p>
+    <!--<input type="color" value="#000000" />-->
+    <table border="1"></table>
+    <a class='cz' href="#" onclick="is_up()">上</a>&nbsp;&nbsp;&nbsp;
+    <a class='cz' href="#" onclick="is_down()">下</a>&nbsp;&nbsp;&nbsp;
+    <a class='cz' href="#" onclick="is_left()">左</a>&nbsp;&nbsp;&nbsp;
+    <a class='cz' href="#" onclick="is_right()">右</a>
+    <br><br><br>
+    <a href="#" id="new" onclick="init()">重来</a>&nbsp;
+    <a href="#" onclick="help()">帮助</a>
+    <br><br>自定义<br>
+    <a href="#" onclick="initClassic()">经典</a>&nbsp;
+    <a href="#" onclick="initOI()">OI之路</a>&nbsp;
+    <a href="#" onclick="initNumber()">Number</a><br>
+    2:<input id="1 ">4:<input id="2 "><br>
+    8:<input id="3 ">16:<input id="4 "><br>
+    32:<input id="5 ">64:<input id="6 "><br>
+    128:<input id="7 ">256:<input id="8 "><br>
+    512:<input id="9 ">1024:<input id="10 "><br>
+    2048:<input id="11 "><br>
+    胜利条件:<input id="12 ">失败条件:<input id="13 "><br>
+    <script src="https://xhabc66.github.io/game/2048/1.js" ></script>
+    <script src='https://xhabc66.github.io/add.js'></script>
+</body>
+</html>
