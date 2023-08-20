@@ -199,7 +199,6 @@ document.onkeydown=function(){
 
 function init()
 {
-    n=4;
     score=0;
     var tableHTML="";
     for(var i=1;i<=n;i++)
@@ -217,6 +216,8 @@ function init()
     Random();
     Print();
 }
+
+function setn(newn){n=newn;}
 
 function initClassic()
 {
@@ -237,5 +238,10 @@ function initNumber()
     document.getElementById("13 ").value="You lose";
 }
 
-addLoadEvent(initClassic);
-addLoadEvent(init);
+function first()
+{
+    document.getElementById('game').style.display="";
+    document.getElementById('begin').innerHTML="重置游戏";
+    init();
+}
+
