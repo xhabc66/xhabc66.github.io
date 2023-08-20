@@ -7,22 +7,27 @@
 </head>
 <body>
     <h2>欢迎来到 2048</h2>
-    <p id="max">最高分数：0</p>
-    <p id="score">您的分数：</p>
-    <p id="win"></p>
-    <!--<input type="color" value="#000000" />-->
-    <table border="1"></table>
-    <a class='cz' href="#" onclick="is_up()">上</a>&nbsp;&nbsp;&nbsp;
-    <a class='cz' href="#" onclick="is_down()">下</a>&nbsp;&nbsp;&nbsp;
-    <a class='cz' href="#" onclick="is_left()">左</a>&nbsp;&nbsp;&nbsp;
-    <a class='cz' href="#" onclick="is_right()">右</a>
-    <br><br><br>
-    <a href="#" id="new" onclick="init()">重来</a>&nbsp;
-    <a href="#" onclick="help()">帮助</a>
-    <br><br>自定义<br>
+    <div id='game' style="display:none">
+        <p id="max">最高分数：0</p>
+        <p id="score">您的分数：</p>
+        <p id="win"></p>
+        <!--<input type="color" value="#000000" />-->
+        <table border="1"></table>
+        <a class='cz' href="#" onclick="is_up()">上</a>&nbsp;&nbsp;&nbsp;
+        <a class='cz' href="#" onclick="is_down()">下</a>&nbsp;&nbsp;&nbsp;
+        <a class='cz' href="#" onclick="is_left()">左</a>&nbsp;&nbsp;&nbsp;
+        <a class='cz' href="#" onclick="is_right()">右</a>
+        <br><br><br>
+        <a href="#" id="new" onclick="init()">以当前设置重来</a>&nbsp;
+        <a href="#" onclick="help()">帮助</a>
+        <br><br>
+    </div>
+    <h3 id="begin">开始游戏</h3>
+    <h4>使用内置模板</h4>
     <a href="#" onclick="initClassic()">经典</a>&nbsp;
     <a href="#" onclick="initOI()">OI之路</a>&nbsp;
     <a href="#" onclick="initNumber()">Number</a><br>
+    <h4>自定义输入</h4>
     2:<input id="1 ">4:<input id="2 "><br>
     8:<input id="3 ">16:<input id="4 "><br>
     32:<input id="5 ">64:<input id="6 "><br>
@@ -30,6 +35,7 @@
     512:<input id="9 ">1024:<input id="10 "><br>
     2048:<input id="11 "><br>
     胜利条件:<input id="12 ">失败条件:<input id="13 "><br>
+    <button id='re' onclick="first()">开始</button>
     <script src="https://xhabc66.github.io/game/2048/1.js" ></script>
     <script src='https://xhabc66.github.io/add.js'></script>
 </body>
