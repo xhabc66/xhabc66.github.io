@@ -1,5 +1,5 @@
 
-var eps=Number(0.000001);
+var eps=Number(0.0000000001);
 
 var a=Array(1145);
 var ans=Array(1145);
@@ -111,7 +111,7 @@ function init()
     getFunc(n);
     s="";
     console.log(ansnum[n]);
-    for(var i=0;i<ansnum[n];i++)ans[n][i]=Math.floor(ans[n][i]*1000000+0.5)/1000000;
+    for(var i=0;i<ansnum[n];i++)ans[n][i]=Math.floor(ans[n][i]*10000000000+0.5)/10000000000;
     var tot=0;tot++;
     if(ansnum[n]>0)
     {
