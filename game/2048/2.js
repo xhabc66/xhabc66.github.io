@@ -140,7 +140,7 @@ function afterMove()
     else if(is&&!win&&!lose)
     {
         lose=true;
-        alert(txt[13]);
+        if(confirm(txt[13]))init();
     }
 }
 
