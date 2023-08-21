@@ -129,7 +129,7 @@ function  check()
 
 function afterMove()
 {
-    for(var i=0;i<Math.max((n*n)/8,1);i++)
+    for(var i=0;i<=Math.max((n*n)/8,1);i++)
             if(Random())
                 score++;
     Print();
