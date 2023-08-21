@@ -128,7 +128,9 @@ function  check()
 
 function afterMove()
 {
-    Random();Random();
+    for(var i=0;i<Math.max((n*n)/8,1);i++)
+            if(Random())
+                score++;
     Print();
     var is=check();
     if(is==1145&&!win){
