@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+            function send(){
+                const requestData = document.getElementById('text').value;
+                const url = 'http://bjsdfz22zzh.com:2110';
+
+                fetch(url, {
+                method: 'POST',
+                body: requestData,
+                mode:"cors"
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert(`${data}`);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <h1>xhabc66.github.io 后端测试</h1>
+        <input id="text">
+        <a href="#" onclick="send()">发送</a>
+    </body>
+</html>
