@@ -11,6 +11,26 @@ function addLoadEvent(newEvent)
     }
 }
 
+function setCookie(name, value, expiryDays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + "; " + expires;
+}
+
+// 获取cookie的函数
+function getCookie(name) {
+    var cookieString = document.cookie;
+    var cookies = cookieString.split("; ");
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i].split("=");
+      if (cookie[0] === name) {
+        return cookie[1];
+      }
+    }
+    return null; // 如果找不到指定名称的cookie，则返回null
+}
+
 addLoadEvent(function(){
-    document.getElementsByTagName('body')[0].innerHTML=document.getElementsByTagName('body')[0].innerHTML+'<a href="https://xhabc66.github.io/" style="position: absolute;left:0px;top:0px;"><<-回到主页</a>';
+    document.getElementsByTagName('body')[0].innerHTML=document.getElementsByTagName('body')[0].innerHTML+'<div style="position: absolute;left:0px;top:0px;"><a href="https://xhabc66.github.io/" ><<-回到主页</a>&nbsp;当前账号：'+getCookie("name")+'</div>';
 })
