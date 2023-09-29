@@ -83,4 +83,5 @@ function change()
 function logout()
 {
     document.cookie="name= ; password=;"
+    location.href="login.html";
 }
