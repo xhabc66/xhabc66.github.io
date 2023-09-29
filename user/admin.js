@@ -1,61 +1,86 @@
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <title>账号管理</title>
-    <script src="admin.js"></script>
-	<style>
-        .underline{border-bottom: 4px solid #17a2b8;}
-        .point{cursor: pointer;}
-        .inl{
-            display: inline-block;
-            vertical-align: top;
-        }
+// 设置cookie的函数
+function setCookie(name, value, expiryDays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + "; " + expires;
+}
 
-        .nobold{font-weight: normal;}
-        .blue{color: #17a2b8;}
-        button{cursor: pointer;}
-        .white-button{
-            background-color: #fff;
-            border-radius: 6px;
-            padding: 6px;
-            border: 1px solid #bbb;
-        }
-        body{margin: 0;}
-        span.underline{
-            border-bottom: 4px solid #17a2b8;
-        }
-        button.blue{
-            background-color: #17a2b8;
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
-            color: white;
-            font-size: 16px;
-        }
-		.input{
-			width: calc(100% - 45px);
-			font-size: 16px;
-			padding: 6px;
-		}
-	</style>
-</head>
-<body>
-	<div style="text-align: center; min-height: 100vh;  background-size: 100% 100%; padding: 100px 0px;">
-		<div class="inl" style="text-align: left; padding: 20px; width: min(100vw,800px); background-color: #fff;">
-			<h2 class="inl  point" onclick="return false;">用户登录</h2>&emsp;
-			<p>原密码</p>
-			<input id="old" class="input" type="password" placeholder="请输入原密码(必填)">
-			<p>新密码</p>
-			<input id="new" class="input" type="password" placeholder="请输入新密码(必填)">
-            <p>再次输入新密码</p>
-			<input id="new2" class="input" type="password" placeholder="请输入新密码(必填)">
-			<p>忘记密码？请联系管理员：haohao20210607@163.com</p>
-			<button type="button" class="blue" onclick="change()">修&emsp;改</button>
-            <br><br>
-            <h2 class="inl  point" onclick="return false;">退出登录</h2>&emsp;
-            <br><br>
-            <button type="button" class="blue" onclick="logout()">登&emsp;出</button>
-		</div>
-	</div>
+function addCookie(name,value)
+{
+    document.cookie = name + "=" + value + "; " + document.cookie;
+}
+
+// 获取cookie的函数
+function getCookie(name) {
+    var cookieString = document.cookie;
+    var cookies = cookieString.split("; ");
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i].split("=");
+      if (cookie[0] === name) {
+        return cookie[1];
+      }
+    }
+    return null; // 如果找不到指定名称的cookie，则返回null
+}
+
+window.onload=function()
+{
+    if(getCookie("name")=="")location.href="login.html";
+}
+
+function change()
+{
+    var name=getCookie("name");
+    var password=document.getElementById('old').value;
+    var newpassword = document.getElementById('new').value;
+    var new2=document.getElementById('new2').value;
+    if(newpassword!=new2)
+    {
+        alert("两次密码不一样");
+        return false;
+    }
+    var requestData='change '+name+' '+password+' '+new2;
+
+    const url = 'https://bjsdfz22zzh.com:2110';
+
+    console.log(requestData);
+    fetch(url, {
+        method: 'POST',
+        body: requestData,
+        mode:"cors"
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(`${data}`);
+            if(data=="success")
+            {
+                requestData = 'md5 '+new2;
+
+                fetch(url, {
+                    method: 'POST',
+                    body: requestData,
+                    mode:"cors"
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        setCookie("name",name,1)
+                        addCookie("password", data);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+    });
 
 
-</body></html>
+}
+
+
+function logout()
+{
+    document.cookie="name= ; password=;"
+}
