@@ -91,7 +91,7 @@ function regsiter()
         return false;
     }
     const requestData = 'regsiter '+name+' '+password;
-    console.log(requestData);
+    //console.log(requestData);
     const url = 'https://bjsdfz22zzh.com:2110';
 
     fetch(url, {
