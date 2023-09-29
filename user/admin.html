@@ -1,0 +1,61 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>账号管理</title>
+    <script src="admin.js"></script>
+	<style>
+        .underline{border-bottom: 4px solid #17a2b8;}
+        .point{cursor: pointer;}
+        .inl{
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .nobold{font-weight: normal;}
+        .blue{color: #17a2b8;}
+        button{cursor: pointer;}
+        .white-button{
+            background-color: #fff;
+            border-radius: 6px;
+            padding: 6px;
+            border: 1px solid #bbb;
+        }
+        body{margin: 0;}
+        span.underline{
+            border-bottom: 4px solid #17a2b8;
+        }
+        button.blue{
+            background-color: #17a2b8;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-size: 16px;
+        }
+		.input{
+			width: calc(100% - 45px);
+			font-size: 16px;
+			padding: 6px;
+		}
+	</style>
+</head>
+<body>
+	<div style="text-align: center; min-height: 100vh;  background-size: 100% 100%; padding: 100px 0px;">
+		<div class="inl" style="text-align: left; padding: 20px; width: min(100vw,800px); background-color: #fff;">
+			<h2 class="inl  point" onclick="return false;">用户登录</h2>&emsp;
+			<p>原密码</p>
+			<input id="old" class="input" type="password" placeholder="请输入原密码(必填)">
+			<p>新密码</p>
+			<input id="new" class="input" type="password" placeholder="请输入新密码(必填)">
+            <p>再次输入新密码</p>
+			<input id="new2" class="input" type="password" placeholder="请输入新密码(必填)">
+			<p>忘记密码？请联系管理员：haohao20210607@163.com</p>
+			<button type="button" class="blue" onclick="change()">修&emsp;改</button>
+            <br><br>
+            <h2 class="inl  point" onclick="return false;">退出登录</h2>&emsp;
+            <br><br>
+            <button type="button" class="blue" onclick="logout()">登&emsp;出</button>
+		</div>
+	</div>
+
+
+</body></html>
