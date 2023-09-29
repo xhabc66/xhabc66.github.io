@@ -67,6 +67,7 @@ function login()
     .then(data => {
         alert(`${data}`);
         if(data="登录成功")setCookie("name", name, 30);
+        location.href='https://xhabc66.github.io";
     })
     .catch(error => {
         console.error('Error:', error);
