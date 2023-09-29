@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>用户信息</title>
+        <style>
+            div#up{
+                position: absolute;
+                left:100px;
+                top:100px;
+                width:calc(90% - 100px);
+                height:30%;
+                border-radius:1em;
+                overflow: hidden;
+            }
+            div#up img#pic1{
+                position: absolute;
+                top: -350px;
+                left: -200px;
+                width:130%;
+                border-radius:1em;
+                overflow: hidden;
+            }
+            div#up div#title{
+                position: absolute;
+                left:150px;
+                bottom: 0%;
+                z-index: 1;
+            }
+            div#up div#title div#name{
+                font-size:2em;
+            }
+            div#up div#title div#qm{
+                font-size:0.7em;
+            }
+            div#info{
+                position: absolute;
+                left:100px;
+                top:calc(30% + 150px);
+                right:calc(30% + 50px);
+                border: 1px solid black;
+                height: fit-content;
+            }
+            div#info div#in{
+                position: absolute;
+                left:2em;
+                top:2em;
+                width:100%;
+                height:100%;
+                background-color: white;
+            }
+            div#info div#in div#txt{
+                word-wrap: break-word;
+                width:100%;
+                height:100%;
+            }
+            div#id{
+                border: 1px solid gray;
+                position: absolute;
+                left:calc(70% + 50px);
+                right:10%;
+                top:calc(30% + 170px);
+                border-radius:0.4em;
+                
+            }
+            table{
+                width:100%;
+                color:gray;
+            }
+            td.right{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="up">
+            <img id="pic1" src="https://pic1.zhimg.com/v2-e0ca937a1d3296e7463aa0aa096bef48_r.jpg">
+            <div id="title">
+                <div id="name"></div>
+                <div id="qm"></div>
+            </div>
+        </div>
+        <div id="info">
+            <div id="in">
+                <h2 id="title">个人主页</h2>
+                <div id="txt">
+                </div>
+            </div>
+        </div>
+        <div id="id">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="left">用户编号</td>
+                        <td class="right"></td>
+                    </tr>
+                    <tr>
+                        <td class="left">注册时间</td>
+                        <td class="right"></td>
+                    </tr>
+                    <tr>
+                        <td class="left">用户类型</td>
+                        <td class="right"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="user.js"></script>
+    </body>
+</html>
