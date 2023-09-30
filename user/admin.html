@@ -41,7 +41,19 @@
 <body>
 	<div style="text-align: center; min-height: 100vh;  background-size: 100% 100%; padding: 100px 0px;">
 		<div class="inl" style="text-align: left; padding: 20px; width: min(100vw,800px); background-color: #fff;">
-			<h2 class="inl  point" onclick="return false;">用户登录</h2>&emsp;
+			<h2 class="inl  point" onclick="return false;">账号管理</h2>&emsp;
+			<p>安全验证</p>
+			<input id="password" class="input" type="password" placeholder="请输入密码(必填)">
+			<p>个性签名</p>
+			<input id="sign" class="input" type="text" placeholder="请输入个性签名(必填)">
+            <p>个人主页内容</p>
+			<textarea id="info" class="input" type="password" style="height:200px;width: min(100vw,800px);resize: none;" placeholder="请输入个人主页内容(必填)"></textarea>
+            <br><br>
+			<button type="button" class="blue" onclick="changeInfo()">修&emsp;改</button>
+
+            <br><br>
+            
+            <h2 class="inl  point" onclick="return false;">修改密码</h2>&emsp;
 			<p>原密码</p>
 			<input id="old" class="input" type="password" placeholder="请输入原密码(必填)">
 			<p>新密码</p>
