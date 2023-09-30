@@ -122,5 +122,5 @@ function log()
 
 window.onload=function()
 {
-    if(getCookie('name')!=null&&getCookie('name')!=""){alert(getCookie('name'));location.href='https://xhabc66.github.io';}
+    if(getCookie('name')!=null&&getCookie('name')!=""){location.href='https://xhabc66.github.io';}
 }
