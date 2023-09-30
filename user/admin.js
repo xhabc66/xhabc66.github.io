@@ -65,6 +65,11 @@ function changeInfo()
     sign=t.join("&lt;");
     t=info.split('>');
     info=t.join('&gt;');
+
+    t=sign.split('>');
+    sign=t.join("&gt;");
+    t=info.split('<');
+    info=t.join('&lt;');
     
 
     var requestData='changeinfo '+name+' '+password+' '+sign+' '+info;
