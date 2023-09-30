@@ -32,5 +32,7 @@ function getCookie(name) {
 }
 
 addLoadEvent(function(){
-    document.getElementsByTagName('body')[0].innerHTML=document.getElementsByTagName('body')[0].innerHTML+'<div style="position: absolute;left:0px;top:0px;"><a href="https://xhabc66.github.io/" ><<-回到主页</a>&nbsp;当前账号：'+getCookie("name")+'</div>';
+    document.getElementsByTagName('body')[0].innerHTML=document.getElementsByTagName('body')[0].innerHTML+'<div style="position: absolute;left:0px;top:0px;"><a href="https://xhabc66.github.io/" ><<-回到主页</a></div>';
+    if(getCookie("name")!=""&&getCookie("name")!=null)document.body.innerHTML=document.body.innerHTML+'<div id="admin" style="position: absolute;top:0px;left:85%;"><a href="https://xhabc66.github.io/user/admin.html">用户管理</a></div>';
+    else document.body.innerHTML=document.body.innerHTML+'<div id="admin" style="position: absolute;top:0px;left:85%;"><a href="https://xhabc66.github.io/user/login.html">登录/注册</a></div>';
 })
