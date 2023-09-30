@@ -1,3 +1,6 @@
+const url='https://bjsdfz22zzh.com:2110';
+
+
 // 设置cookie的函数
 function setCookie(name, value, expiryDays) {
     var d = new Date();
@@ -27,6 +30,58 @@ function getCookie(name) {
 window.onload=function()
 {
     if(getCookie("name")=="")location.href="login.html";
+    
+    fetch(url, {
+        method: 'POST',
+        body: "getname "+getCookie("name"),
+        mode:"cors"
+        })
+        .then(response => response.text())
+        .then(data => {
+            var datas=data.split(' ');
+            document.getElementById('sign').value=datas[3];
+            document.getElementById('info').innerHTML=datas[4];
+        })
+        .catch(error => {
+            console.error('Error:', error);
+    });
+}
+
+function changeInfo()
+{
+    var name=getCookie("name");
+    var password=document.getElementById('password').value;
+    var sign=document.getElementById('sign').value;
+    var info=document.getElementById('info').value;
+
+    if(sign.length>64||info.length>2048)
+    {
+        alert("内容过长！");
+        return false;
+    }
+
+    var t;
+    t=sign.split('<');
+    sign=t.join("&lt;");
+    t=info.split('>');
+    info=t.join('&gt;');
+    
+
+    var requestData='changeinfo '+name+' '+password+' '+sign+' '+info;
+
+    console.log(requestData);
+    fetch(url, {
+        method: 'POST',
+        body: requestData,
+        mode:"cors"
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(`${data}`);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+    });
 }
 
 function change()
@@ -42,7 +97,6 @@ function change()
     }
     var requestData='change '+name+' '+password+' '+new2;
 
-    const url = 'https://bjsdfz22zzh.com:2110';
 
     console.log(requestData);
     fetch(url, {
@@ -53,7 +107,7 @@ function change()
         .then(response => response.text())
         .then(data => {
             alert(`${data}`);
-            if(data=="success")
+            if(data=="修改成功！")
             {
                 requestData = 'md5 '+new2;
 
