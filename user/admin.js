@@ -50,7 +50,7 @@ window.onload=function()
 function changeInfo()
 {
     var name=getCookie("name");
-    var password=document.getElementById('password').value;
+    var password=getCookie("password");
     var sign=document.getElementById('sign').value;
     var info=document.getElementById('info').value;
 
@@ -141,6 +141,7 @@ function change()
 
 function logout()
 {
-    document.cookie="name= ; password=;"
+    document.cookie="name=";
+    document.cookie="password="
     location.href="login.html";
 }
