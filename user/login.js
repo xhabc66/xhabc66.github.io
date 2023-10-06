@@ -59,15 +59,16 @@ function login()
     const url = 'https://bjsdfz22zzh.com:2110';
 
     fetch(url, {
-    method: 'POST',
-    body: requestData,
-    mode:"cors"
-    })
-    .then(response => response.text())
+        method: 'POST',
+        body: requestData,
+        mode:"cors"
+    }).then(response => response.text())
     .then(data => {
-        alert(`${data}`);
-        if(data="登录成功")setCookie("name", name, 30);
-        location.href='https://xhabc66.github.io';
+        var data1=data+' ';
+        var datas=(data+' ').split(' ');
+        alert(datas[0]);
+        document.cookie= "password="+datas[1];
+        document.cookie= "name="+name;
     })
     .catch(error => {
         console.error('Error:', error);
