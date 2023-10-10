@@ -69,6 +69,7 @@ function login()
         alert(datas[0]);
         document.cookie= "password="+datas[1];
         document.cookie= "name="+name;
+        location.href='https://xhabc66.github.io';
     })
     .catch(error => {
         console.error('Error:', error);
