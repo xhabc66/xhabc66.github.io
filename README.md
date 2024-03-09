@@ -1,5 +1,5 @@
 # fishx游戏食用指南
-$\color{red}警告：目前只兼容Linux系统（编写环境：NOI Linux）。请不要在 Windows 中运行！$
+警告：目前只兼容Linux系统（编写环境：NOI Linux）。请不要在 Windows 中运行！
 ## 目录
 - [使用方法](#如何使用)
 - [游戏内容](#游戏内容)
