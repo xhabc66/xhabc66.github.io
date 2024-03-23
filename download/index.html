@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>fishx官方网站</title>
+	<meta charset="UTF-8">
+	<style>
+		html {
+			user-select: none;
+		}
+    	body{
+      		text-align:center;
+      		background-color:rgb(200,255,255);
+    	}
+    	.list{
+    		border-radius:20px;
+    		background-color:rgb(100,255,255);
+    		width:auto;
+    		padding-bottom:20px;
+    		width:30%;
+    		margin-left:auto;
+    		margin-right:auto;
+    	}
+    	.list .title{
+    		border-top-left-radius:20px;
+    		border-top-right-radius:20px;
+    		background-color:blue;
+    		color:white;
+    	}
+    	.list button{
+    		border-radius:20px;
+    		border:0px;
+    		width:40%;
+    	}
+    	.new button{width:40%;}
+    	.all button{width:85%;}
+
+    	.list button:hover{
+    		background-color:rgb(200,200,200);
+    	}
+	</style>
+</head>
+
+<body>
+	<h1>下载fishx</h1>
+	<div class='new list'>
+		<p class='title'>最新版</p>
+		<button href='fishx-v0.4.0.zip'>最新正式版</button>
+		<button href='fishx-v0.4.0.zip'>最新快照版</button>
+	</div>
+	<br>
+	<div class='list all'>
+		<p class='title'>正式版</p>
+		<button href='fishx-v0.4.0.zip'>v0.4.0</button>
+		<button href='fishx-v0.3.2.zip'>v0.3.2</button>
+		<button href='fishx-v0.3.1.zip'>v0.3.1</button>
+  		<button href='fishx-v0.2.2.zip'>v0.2.2</button>
+  	</div>
+  	<div class='list all' style="background-color:rgb(200,255,200);">
+		<p class='title' style="background-color:rgb(0,255,0);color:black">预览版</p>
+		<button href='fishx-pre0.4.0.zip'>pre0.4.0</button>
+		<button href='fishx-24w03a.zip'>24w03a</button>
+		<button href='fishx-24w02b.zip'>24w02b</button>
+		<button href='fishx-24w02a.zip'>24w02a</button>
+		<button href='fishx-24w01a.zip'>24w01a</button>		  		  		
+  	</div>
+  	<div class='list all' style="background-color:rgb(255,255,200);">
+		<p class='title' style="background-color:rgb(255,255,0);color:black">远古版(fishing)</p>
+		<button href='fishing0.0.3.zip'>0.0.3</button>
+		<button href='fishing0.0.2.zip'>0.0.2</button>
+		<button href='fishing0.0.1.zip'>0.0.1</button>		  		  		
+  	</div>
+  	<script>
+  		window.onload=function(){
+  			button=document.getElementsByTagName('button');
+  			for(i=0;i<button.length;i++)button[i].onclick=function(){location.href=this.getAttribute("href");}
+  		}
+  	</script>
+</body>
+
+</html>
