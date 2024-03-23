@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>fishx官方网站</title>
+	<meta charset="UTF-8">
+	<style>
+		html {
+			user-select: none;
+		}
+    	body{
+      		text-align:center;
+      		background-color:rgb(200,255,255);
+    	}
+    	.list{
+    		border-radius:20px;
+    		background-color:rgb(100,255,255);
+    		width:auto;
+    		padding-bottom:20px;
+    		width:30%;
+    		margin-left:auto;
+    		margin-right:auto;
+    	}
+    	.list .title{
+    		border-top-left-radius:20px;
+    		border-top-right-radius:20px;
+    		background-color:blue;
+    		color:white;
+    	}
+    	.list button{
+    		border-radius:20px;
+    		border:0px;
+    		width:40%;
+    		margin-top:3px;
+    		margin-bottom:3px;
+    	}
+    	.new button{width:85%;}
+    	.all button{width:85%;}
+
+    	.list button:hover{
+    		background-color:rgb(200,200,200);
+    	}
+	</style>
+</head>
+
+<body>
+	<h1>休闲命令行小游戏-fishx</h1>
+	<div class='new list'>
+		<p class='title'>下载</p>
+		<button href='/extdomains/github.com/xhabc66/xhabc66.github.io/blob/main/download/fishx-v0.4.0.zip'>最新正式版</button>
+		<button href='/extdomains/github.com/xhabc66/xhabc66.github.io/blob/main/download/fishx-v0.4.0.zip'>最新快照版</button>
+		<button href='/extdomains/github.com/xhabc66/xhabc66.github.io/blob/main/download/index.html'>下载列表</button>
+	</div>
+	<br>
+	<div class='list all' style="background-color:rgb(200,150,255);">
+		<p class='title' style="background-color:rgb(127,0,255);">贡献榜</p>
+		<p>xhabc66-开发者</p>
+		<p>lyuwenhan-开发者（现已离开）</p>
+		<p>锅里的果冻-艺术支持</p>
+  	</div>
+  	<p>本游戏采用Apache-2.0许可证，请在二次发布中包含原始版权声明与许可证</p>
+  	<script>
+  		window.onload=function(){
+  			button=document.getElementsByTagName('button');
+  			for(i=0;i<button.length;i++)button[i].onclick=function(){location.href=this.getAttribute("href");}
+  		}
+  	</script>
+</body>
+
+</html>
